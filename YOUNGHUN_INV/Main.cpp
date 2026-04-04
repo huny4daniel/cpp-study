@@ -41,7 +41,7 @@ int main() {
         default:
             cout << "번호 확인 후 다시 입력하세요." << endl;
         }
-        cout << endl;
     }
+    
     return 0;
 }

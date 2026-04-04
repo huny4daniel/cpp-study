@@ -1,8 +1,9 @@
 #ifndef INVENTORY_MANAGER_H
 #define INVENTORY_MANAGER_H
+#include <string>
 #include "Product.h"
 
-class InventoryManager {
+class InventoryManager  {
 private:
     Product* pProductArray;
     int nMaxSize;
@@ -17,9 +18,9 @@ public:
     void addProduct();
     void list();
     void removeProduct();
-    void searchByName();
-    void inbound();
-    void outbound();
+    void searchByName(); // (추가 기능 1: 상품 검색)
+    void inbound(); // (추가 기능 2: 상품 입고)
+    void outbound(); // (추가 기능 3: 상품 출고)
 };
 
 #endif
