@@ -8,8 +8,11 @@ class Person {
 public:
     Person(int id, char* name);
     ~Person();
+
     void changeName(char* name);
-    void show() { cout << id << ',' << name << endl; }
+    void show() { 
+        cout << id << ',' << name << endl; 
+    }
 };
 
 Person::Person(int id, char* name) {
@@ -20,12 +23,16 @@ Person::Person(int id, char* name) {
 }
 
 Person::~Person() {
-    if (name)
-    delete[] name;
+    if (name) {
+        delete[] name;
+    }
 }
 
 void Person::changeName(char* name) {
-    if (strlen(name) > strlen(this->name)) return;
+    if (strlen(name) > strlen(this->name))  {
+        return;
+    }
+    
     strcpy(this->name, name);
 }
 

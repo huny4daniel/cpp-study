@@ -8,13 +8,15 @@ public:
         this->width = width;
         this->height = height;
     }
+    
     friend bool equals(Rect r, Rect s);
 };
 
 bool equals(Rect r, Rect s) {
     if (r.width == s.width && r.height == s.height) {
         return true;
-    } else {
+    } 
+    else {
         return false;
     }
 }
@@ -25,7 +27,8 @@ int main() {
 
     if (equals(a, b)) {
         cout << "equal" << endl;
-    } else {
+    } 
+    else {
         cout << "not equal" << endl;
     }
 }

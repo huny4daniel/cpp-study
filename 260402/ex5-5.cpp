@@ -16,6 +16,7 @@ bool average(int a[], int size, int& avg) {
 int main() {
     int x[] = {0, 1, 2, 3, 4, 5};
     int avg;
+    
     if (average(x, 6, avg)) {
         cout << "평균은 " << avg << endl;
     } 

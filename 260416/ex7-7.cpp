@@ -9,27 +9,29 @@ public:
         this->kick = kick;
         this->punch = punch;
     }
+
     void show();
-    Power operator+(Power op2);
+    Power operator+(int op2);
 };
 
 void Power::show() {
     cout << "kick=" << kick << ',' << "punch=" << punch << endl;
 }
 
-Power Power::operator+(Power op2) {
+Power Power::operator+(int op2) {
     Power tmp;
-    tmp.kick = this->kick + op2.kick;
-    tmp.punch = this->punch + op2.punch;
+    tmp.kick = kick + op2;
+    tmp.punch = punch + op2;
+
     return tmp;
 }
 
 int main() {
-    Power a(3, 5), b(4, 6), c;
-    
-    c = a + b;
-
+    Power a(3, 5), b;
     a.show();
     b.show();
-    c.show();
+    
+    b = a + 2;
+    a.show();
+    b.show();
 }

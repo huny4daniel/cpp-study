@@ -6,8 +6,10 @@ void star(int a = 5);
 void msg(int id, string text = "");
 
 void star(int a) {
-    for (int i = 0; i < a; i++)
+    for (int i = 0; i < a; i++) {
         cout << '*';
+    }
+    
     cout << endl;
 }
 

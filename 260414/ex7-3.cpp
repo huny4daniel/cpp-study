@@ -11,14 +11,18 @@ public:
 class Rect {
     int width, height;
 public:
-    Rect(int width, int height)  { this->width = width; this->height = height; }
+    Rect(int width, int height) {
+        this->width = width; this->height = height; 
+    }
+
     friend RectManager;
 };
 
 bool RectManager::equals(Rect r, Rect s) {
     if(r.width == s.width && r.height == s.height) {
         return true; 
-    } else {
+    } 
+    else {
         return false;
     }
 }
@@ -29,10 +33,16 @@ void RectManager::copy(Rect& dest, Rect& src) {
 
 int main() {
     Rect a(3,4), b(5,6);
+
     RectManager man;
     
     man.copy(b, a);
-    if(man.equals(a, b)) cout << "equal" << endl;
-    else cout << "not equal" << endl;
+
+    if(man.equals(a, b)) {
+        cout << "equal" << endl;
+    }
+    else {
+        cout << "not equal" << endl;
+    }
 }
 

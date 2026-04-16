@@ -3,15 +3,19 @@ using namespace std;
 
 int sum(int a, int b) {
     int s = 0;
-    for (int i = a; i <= b; i++)
+    for (int i = a; i <= b; i++) {
         s += i;
+    }
+
     return s;
 }
 
 int sum(int a) {
     int s = 0;
-    for (int i = 0; i <= a; i++)
+    for (int i = 0; i <= a; i++) {
         s += i;
+    }
+
     return s;
 }
 
