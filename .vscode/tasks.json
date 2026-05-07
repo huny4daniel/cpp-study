@@ -2,6 +2,32 @@
     "tasks": [
         {
             "type": "cppbuild",
+            "label": "C/C++: g++.exe ATM 전체 빌드",
+            "command": "C:\\DevTools\\C\\mingw64\\bin\\g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "Main.cpp",
+                "Account.cpp",
+                "ATMachine.cpp",
+                "Statistics.cpp",
+                "-o",
+                "Main.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}\\younghun_INV"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "detail": "ATM 프로젝트 전체 소스 빌드"
+        },
+        {
+            "type": "cppbuild",
             "label": "C/C++: g++.exe 활성 파일 빌드",
             "command": "C:\\DevTools\\C\\mingw64\\bin\\g++.exe",
             "args": [

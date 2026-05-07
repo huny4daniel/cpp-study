@@ -1,39 +1,43 @@
-#include <iostream>
+﻿#include <iostream>
 #include <string>
+#include "Account.h"
+#include "ATMachine.h"
+
 using namespace std;
-#include "Product.h"
-#include "InventoryManager.h"
 
 int main() {
     int select;
-    InventoryManager iMananger(100);
-    iMananger.addProduct("C++", "인피니티", 10, 30000, true);
-    iMananger.addProduct("자바", "한빛미디어", 10, 35000, true);
-    iMananger.addProduct("파이썬", "생능출판사", 10, 33000, true);
+
+    ATMachine atm(100, 50000, "admin");
 
     while (1) {
-        iMananger.displayMenu();
+        atm.displayMenu();
+
         cout << "메뉴를 선택하세요: ";
-        cin >> select; cout << endl;
+        cin >> select;
+        cout << endl;
 
         switch (select) {
         case 1:
-            iMananger.addProduct();
+            atm.createAccount();
             break;
         case 2:
-            iMananger.list();
+            atm.checkMoney();
             break;
         case 3:
-            iMananger.removeProduct();
+            atm.closeAccount();
             break;
         case 4:
-            iMananger.searchByName();
+            atm.depositMoney();
             break;
         case 5:
-            iMananger.inbound();
+            atm.widrawMoney();
             break;
         case 6:
-            iMananger.outbound();
+            atm.transfer();
+            break;
+        case 8:
+            atm.managerMode();
             break;
         case 9:
             cout << "안녕히 가세요" << endl;
@@ -41,7 +45,9 @@ int main() {
         default:
             cout << "번호 확인 후 다시 입력하세요." << endl;
         }
+
+        cout << endl;
     }
-    
+
     return 0;
 }

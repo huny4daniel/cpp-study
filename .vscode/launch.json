@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "ATM 디버그",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}\\younghun_INV\\Main.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}\\younghun_INV",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "miDebuggerPath": "C:\\DevTools\\C\\mingw64\\bin\\gdb.exe",
+            "preLaunchTask": "C/C++: g++.exe ATM 전체 빌드"
+        }
+    ]
+}
